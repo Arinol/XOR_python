@@ -1,10 +1,8 @@
 """ For begginers, Solving XOR with Machine learning. 
 Neural Network Implementation in Python equivalent to the one in C++.
-Author: Arinol Team
+Author: Omar T. Mohammed
 Date: 27-Feb-2021
 """
-
-# Hereis the new comment !!!
 
 
 # %% import the necessary libraries
@@ -85,15 +83,18 @@ for i in range(1, 50, 1):
 # support for tf.data.Dataset as input objects, support for eager execution.'
 # tf.keras.Sequential  provides training and inference features on the model.
 model = tf.keras.Sequential([
+   
     # tf.keras.layers.Flatten is used to flatten the input.For example,if flatten is applied to layer having input shape
     # as (batch_size, 2,2), then the output shape of the layer will be
     # (batch_size, 4), And then pass the training input size (input layer).
     tf.keras.layers.Flatten(input_shape=(2,)),
+   
     # tf.keras.layers.Dense implements the operation: output = activation(dot(input, kernel) + bias) where activation
     # is the element-wise activation function passed as the activation argument, kernel is a weights matrix created
     # by the layer, and bias is a bias vector created by the layer (only applicable if use_bias is True)."""
     # building the first hidden layer having 8 neurons with Tangent activation function.
     tf.keras.layers.Dense(8, activation='tanh'),
+   
     # building the last layer that have one neuron.
     tf.keras.layers.Dense(1)
 ])
@@ -126,7 +127,6 @@ model.compile(loss='mse',
               # gradient descent procedure to update network weights iterative based in training data.This is a
               # popular version of gradient descent because it automatically tunes itself and gives good results in a
               # wide range of problems.
-
               optimizer='adam',
 
               # metrics=['mae'] A metric is a function that is used to judge the performance of the  model. Metrics
@@ -135,6 +135,7 @@ model.compile(loss='mse',
               # our model by comparing it's performance on both Train & Test sets. We may use any loss function as a
               # metric.
               metrics=['mae'])
+
 # %% 4- Train the model on the given training dataset.
 '''model.fit, Fit Keras Model We have defined our model and compiled it ready for efficient computation. Now it is 
 time to execute the model on some data. We can train or fit our model on our loaded data by calling the fit() function 
@@ -151,7 +152,6 @@ One epoch is comprised of one or more batches, based on the chosen batch size an
 # enough) mapping of rows of input data to the output classification. The model will always have some error,
 # but the amount of error will level out after some point for a given model configuration. This is called model
 # convergence.
-
 f = model.fit(train_data, train_targets, epochs=11, batch_size=1)
 
 # %% 5- Evaluating the trained model on the test set of data to find it's loss and accuracy. after the training is
