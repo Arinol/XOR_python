@@ -21,10 +21,12 @@ import random
 It has a comprehensive, flexible ecosystem of tools, 
 libraries and community resources that lets developers easily build and deploy ML powered applications."""
 import tensorflow as tf
+
 """Import matplotlib.pyplot  which is a collection of functions that make matplotlib work like MATLAB. ' \
 'Each pyplot function makes some change to a figure: e.g., creates a figure, creates a plotting area in a figure, ' \
 'plots some lines in a plotting area, decorates the plot with labels, etc."""
 import matplotlib.pyplot as plt
+
 """Import numpy library that provides a multidimensional array object, various derived objects (such as masked arrays 
 and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, 
 shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical 
