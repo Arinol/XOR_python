@@ -76,6 +76,7 @@ for i in range(1, 50, 1):
     test_data = np.append(test_data, [[a, b]], axis=0)
     test_targets = np.append(test_targets, [c])
 
+
 # %% 2- Building the model using keras library. keras is an API specification that describes how a Deep Learning
 # framework should implement certain part, related to the model definition and training. Is framework agnostic and
 # supports different backends (Theano, Tensorflow, ...) and tf.keras is the Tensorflow specific implementation of the
@@ -188,7 +189,7 @@ plt.plot(f.history['mae'], label='val_loss')
 # data e.g 1,1. This data is in the form that was used to evaluate accuracy after each epoch of training,
 # so it can be used to send test predictions without further pre-processing. np.array([[1, 1]], Create a 2D numpy
 # array and fill it with two random booleans to test the prediction of our trained model.
-T = np.array([[1, 1]])
+T = np.array([[0, 1]])
 
 # print out the array.  
 print(T)
@@ -224,3 +225,5 @@ a = model.predict(T)
 
 # Explained see above.
 print("Prediction: ", a)
+
+# %%
