@@ -4,8 +4,6 @@ Author: Arinol Team
 Date: 27-Feb-2021
 """
 
-# Hereis the new comment !!!
-
 
 # %% import the necessary libraries
 # future library supports the standard library reorganization (PEP 3108) via one of several mechanisms,
@@ -21,10 +19,12 @@ import random
 It has a comprehensive, flexible ecosystem of tools, 
 libraries and community resources that lets developers easily build and deploy ML powered applications."""
 import tensorflow as tf
+
 """Import matplotlib.pyplot  which is a collection of functions that make matplotlib work like MATLAB. ' \
 'Each pyplot function makes some change to a figure: e.g., creates a figure, creates a plotting area in a figure, ' \
 'plots some lines in a plotting area, decorates the plot with labels, etc."""
 import matplotlib.pyplot as plt
+
 """Import numpy library that provides a multidimensional array object, various derived objects (such as masked arrays 
 and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, 
 shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical 
@@ -75,6 +75,7 @@ for i in range(1, 50, 1):
     c = a ^ b
     test_data = np.append(test_data, [[a, b]], axis=0)
     test_targets = np.append(test_targets, [c])
+
 
 # %% 2- Building the model using keras library. keras is an API specification that describes how a Deep Learning
 # framework should implement certain part, related to the model definition and training. Is framework agnostic and
@@ -186,7 +187,7 @@ plt.plot(f.history['mae'], label='val_loss')
 # data e.g 1,1. This data is in the form that was used to evaluate accuracy after each epoch of training,
 # so it can be used to send test predictions without further pre-processing. np.array([[1, 1]], Create a 2D numpy
 # array and fill it with two random booleans to test the prediction of our trained model.
-T = np.array([[1, 1]])
+T = np.array([[0, 1]])
 
 # print out the array.  
 print(T)
@@ -222,3 +223,5 @@ a = model.predict(T)
 
 # Explained see above.
 print("Prediction: ", a)
+
+# %%
